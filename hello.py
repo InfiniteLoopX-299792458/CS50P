@@ -36,3 +36,17 @@ name = name.strip()
 
 # Print the output
 print(f"hello, {name}")
+
+
+#👇🏻Using the title method, it would title case the user’s name:
+# Ask the user for their name
+name = input("What's your name? ")
+
+# Remove whitespace from the str
+name = name.strip()
+
+# Capitalize the first letter of each word
+name = name.title()
+
+# Print the output
+print(f"hello, {name}")
