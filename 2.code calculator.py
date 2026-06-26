@@ -18,3 +18,8 @@ z = int(x) + int(y)
 print(z)
 #👆🏻The result is now correct. 
 #👆🏻The use of int(x) is called “casting,” where a value is temporarily changed from one type of variable (in this case, a string) to another (here, an integer).
+
+#👇🏻We can further improve our program as follows:
+x = int(input("What's x? "))
+y = int(input("What's y? "))
+print(x + y)
