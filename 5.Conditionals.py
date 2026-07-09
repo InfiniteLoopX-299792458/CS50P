@@ -159,3 +159,38 @@ if x != y:
     print("x is not equal to y")
 else:
     print("x is equal to y")
+
+#👇🏻Notice that the == operator evaluates if what is on the left and right are equal to one another.
+x = int(input("What's x? "))
+y = int(input("What's y? "))
+if x == y:
+    print("x is equal to y")
+else:
+    print("x is not equal to y")
+#👆🏻
+# =============================================================================
+#
+#                                  start
+#                                    │
+#                                    ▼
+#                              ╱───────────╲
+#                             ╱   x == y    ╲
+#                             ╲             ╱
+#                              ╲───────────╱
+#                               ╱         ╲
+#                       True   ╱           ╲   False
+#                             ╱             ╲
+#                            ▼               ▼
+#                ┌───────────────────┐   ┌───────────────────────┐
+#                │ "x is equal to y" │   │ "x is not equal to y" │
+#                └─────────┬─────────┘   └───────────┬───────────┘
+#                          ╲                         ╱
+#                           ╲                       ╱
+#                            ╲                     ╱
+#                             ╲     ╭────────╮    ╱
+#                              └───▶│  stop  │◀──┘
+#                                   ╰────────╯
+#
+# =============================================================================
+
+#👇🏻Similar to or, and can be used within conditional statements.
