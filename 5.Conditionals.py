@@ -142,3 +142,20 @@ else:
 #                                       ╰────────╯
 #
 # =============================================================================
+
+#👇🏻"or" allows your program to decide between one or more alternatives. For example, we could further edit our program as follows:
+x = int(input("What's x? "))
+y = int(input("What's y? "))
+if x < y or x > y:
+    print("x is not equal to y")
+else:
+    print("x is equal to y")
+#👆🏻Notice that the result of our program is the same, but the complexity is decreased. The efficiency of our code is increased.
+
+#👇🏻Notice how we removed the or entirely and simply asked, “Is x not equal to y?” We ask one and only one question. Very efficient!
+x = int(input("What's x? "))
+y = int(input("What's y? "))
+if x != y:
+    print("x is not equal to y")
+else:
+    print("x is equal to y")
