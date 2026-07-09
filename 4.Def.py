@@ -31,3 +31,34 @@ name = input("What's your name? ")
 hello(name)
 # Output without passing the expected arguments
 hello()
+
+#👇🏻We don’t have to have our function at the start of our program. We can move it down, but we need to tell the interpreter that we have a main function and a separate hello function.
+def main():
+    # Output using our own function
+    name = input("What's your name? ")
+    hello(name)
+    # Output without passing the expected arguments
+    hello()
+# Create our own function
+def hello(to="world"):
+    print("hello,", to)
+
+#👇🏻The following very small modification will call the main function and restore our program to working order:
+def main():
+    # Output using our own function
+    name = input("What's your name? ")
+    hello(name)
+    # Output without passing the expected arguments
+    hello()
+# Create our own function
+def hello(to="world"):
+    print("hello,", to)
+main()
+
+#👇🏻EXAMPLE
+def main():
+    x = int(input("What's x? "))
+    print("x squared is", square(x))
+def square(n):
+    return n * n
+main()
