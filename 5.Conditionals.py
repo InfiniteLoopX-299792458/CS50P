@@ -62,7 +62,7 @@ if x == y:
 # =============================================================================
 
 #👇🏻 First, the if statement is evaluated. If this statement is found to be true, all the elif statements will not be run at all. However, if the if statement is evaluated and found to be false, the first elif will be evaluated. If this is true, it will not run the final evaluation.
-# x = int(input("What's x? "))
+x = int(input("What's x? "))
 y = int(input("What's y? "))
 if x < y:
     print("x is less than y")
