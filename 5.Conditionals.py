@@ -239,3 +239,89 @@ if x % 2 == 0:
     print("Even")
 else:
     print("Odd")
+
+#👇🏻Notice that our if statement is_even(x) works even though there is no operator there. This is because our function returns a bool (Boolean), True or False, back to the main function. The if statement simply evaluates whether or not is_even of x is true or false.
+def main():
+    x = int(input("What's x? "))
+    if is_even(x):
+        print("Even")
+    else:
+        print("Odd")
+def is_even(n):
+    if n % 2 == 0:
+        return True
+    else:
+        return False
+main()
+
+#👇🏻Much simpler and improved version
+def main():
+    x = int(input("What's x? "))
+    if is_even(x):
+        print("Even")
+    else:
+        print("Odd")
+def is_even(n):
+    return True if n % 2 == 0 else False
+main()
+
+#👇🏻Even more improved version
+def main():
+    x = int(input("What's x? "))
+    if is_even(x):
+        print("Even")
+    else:
+        print("Odd")
+def is_even(n):
+    return n % 2 == 0
+main()
+#👆🏻The program will evaluate what is happening within the n % 2 == 0 as either True or False and simply return that to the main function.
+
+#⭐ MATCH
+#Similar to if, elif, and else statements, match statements can be used to conditionally run code that matches certain values.
+name = input("What's your name? ")
+if name == "Harry":
+    print("Gryffindor")
+elif name == "Hermione":
+    print("Gryffindor")
+elif name == "Ron": 
+    print("Gryffindor")
+elif name == "Draco":
+    print("Slytherin")
+else:
+    print("Who?")
+
+#👇🏻We can improve this code slightly with the use of the "or" keyword:
+name = input("What's your name? ")
+if name == "Harry" or name == "Hermione" or name == "Ron": 
+    print("Gryffindor")
+elif name == "Draco":
+    print("Slytherin")
+else:
+    print("Who?")
+
+#👇🏻Alternatively, we can use match statements to map names to houses. Consider the following code:
+name = input("What's your name? ")
+match name: 
+    case "Harry":
+        print("Gryffindor")
+    case "Hermione":
+        print("Gryffindor")
+    case "Ron": 
+        print("Gryffindor")
+    case "Draco":
+        print("Slytherin")
+    case _:
+        print("Who?")
+#👆🏻Notice the use of the "_" symbol in the last case. This will match with any input, resulting in similar behavior as an else statement.
+
+#👇🏻We can improve the code:
+name = input("What's your name? ")
+match name: 
+    case "Harry" | "Hermione" | "Ron":
+          print("Gryffindor")
+    case "Draco":
+          print("Slytherin")
+    case _:
+          print("Who?")
+#👆🏻Notice, the use of the single vertical bar |. Much like the or keyword, this allows us to check for multiple values in the same case statement.
