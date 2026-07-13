@@ -24,3 +24,22 @@ print("meow\n" * 3, end="")
 #The \n character is a newline character, which creates a line break.
 # By multiplying "meow\n" by 3, we get three lines of "meow".
 # The end="" argument in the print function prevents an additional newline from being added at the end of the output.
+
+#Notice that we’ve introduced two new keywords in Python, continue and break. continue explicitly tells Python to go to the next iteration of a loop. break, on the other hand, tells Python to “break out” of a loop early before it has finished all of its iterations. In this case, we’ll continue to the next iteration of the loop when n is less than 0—ultimately reprompting the user with “What’s n?”. If, though, n is greater than or equal to 0, we’ll break out of the loop and allow the rest of our program to run.
+while True:
+    n = int(input("What's n? "))
+    if n < 0:
+        continue
+    else:
+        break
+
+#It turns out that the continue keyword is redundant in this case. We can improve our code as follows:
+while True:
+    n = int(input("What's n? "))
+    if n > 0:
+        break
+for _ in range(n):
+    print("meow")
+#Notice how this while loop will always run (forever) until n is greater than 0. When n is greater than 0, the loop breaks.
+
+#
