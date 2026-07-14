@@ -42,4 +42,35 @@ for _ in range(n):
     print("meow")
 #Notice how this while loop will always run (forever) until n is greater than 0. When n is greater than 0, the loop breaks.
 
-#
+#Notice how not only did we change your code to operate in multiple functions, but we also used a return statement to return the value of n back to the main function.
+def main():
+    meow(get_number())
+def get_number():
+    while True:
+        n = int(input("What's n? "))
+        if n > 0:
+            return n
+def meow(n):
+    for _ in range(n):
+        print("meow")
+main()
+
+#Notice how we have a list of students with their names as above. We then print the student who is at the 0th location, “Hermione”. Each of the other students is printed as well.
+students = ["Hermione", "Harry", "Ron"]
+print(students[0])
+print(students[1])
+print(students[2])
+
+#Notice that for each student in the students list, it will print the student as intended. You might wonder why we did not use the _ designation as discussed prior. We choose not to do this because student is explicitly used in our code.
+students = ["Hermione", "Harry", "Ron"]
+for student in students:
+    print(student)
+
+#-------------------------------------
+#               LENGTH
+#-------------------------------------
+#Imagine that you don’t simply want to print the name of the student but also their position in the list. To accomplish this, you can edit your code as follows:
+students = ["Hermione", "Harry", "Ron"]
+for i in range(len(students)):
+    print(i + 1, students[i])
+#Notice how executing this code results in not only getting the position of each student plus one using i + 1, but also prints the name of each student. len allows you to dynamically see how long the list of the students is regardless of how much it grows.
