@@ -66,6 +66,7 @@ students = ["Hermione", "Harry", "Ron"]
 for student in students:
     print(student)
 
+#-------------------------------------------------*****-----------------------------------------------
 #-------------------------------------
 #               LENGTH
 #-------------------------------------
@@ -74,3 +75,24 @@ students = ["Hermione", "Harry", "Ron"]
 for i in range(len(students)):
     print(i + 1, students[i])
 #Notice how executing this code results in not only getting the position of each student plus one using i + 1, but also prints the name of each student. len allows you to dynamically see how long the list of the students is regardless of how much it grows.
+#-------------------------------------------------*****-----------------------------------------------
+
+#dicts or dictionaries are a data structure that allows you to associate keys with values.
+#Where a list is a list of multiple values, a dict associates a key with a value.
+
+#The individual at the first position of students is associated with the house at the first position of the houses list, and so on.
+students = ["Hermione", "Harry", "Ron", "Draco"]
+houses = ["Gryffindor", "Gryffindor", "Griffindor", "Slytherin"]
+
+#use {} curly braces to create a dictionary. Where lists use numbers to iterate through the list, dicts allow us to use words.
+students = {
+    "Hermione": "Gryffindor",
+    "Harry": "Gryffindor",
+    "Ron": "Gryffindor",
+    "Draco": "Slytherin",
+}
+print(students["Hermione"])
+print(students["Harry"])
+print(students["Ron"])
+print(students["Draco"])
+
