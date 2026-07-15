@@ -96,3 +96,14 @@ print(students["Harry"])
 print(students["Ron"])
 print(students["Draco"])
 
+#students[student] will go to each student’s key and find the value of their house. Execute your code, and you’ll notice how the output is a bit messy.
+students = {
+    "Hermione": "Gryffindor",
+    "Harry": "Gryffindor",
+    "Ron": "Gryffindor",
+    "Draco": "Slytherin",
+}
+for student in students:
+    print(student, students[student])
+
+#
