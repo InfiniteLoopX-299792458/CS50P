@@ -106,4 +106,66 @@ students = {
 for student in students:
     print(student, students[student])
 
+students = {
+    "Hermione": "Gryffindor",
+    "Harry": "Gryffindor",
+    "Ron": "Gryffindor",
+    "Draco": "Slytherin",
+}
+for student in students:
+    print(student, students[student], sep=", ")
+#👇🏻
+#$ python hogwarts.py
+#Hermione, Gryffindor
+#Harry, Gryffindor
+#Ron, Gryffindor
+#Draco, Slytherin
+
+students = [
+    {"name": "Hermione", "house": "Gryffindor", "patronus": "Otter"},
+    {"name": "Harry", "house": "Gryffindor", "patronus": "Stag"},
+    {"name": "Ron", "house": "Gryffindor", "patronus": "Jack Russell terrier"},
+    {"name": "Draco", "house": "Slytherin", "patronus": None},
+]
+for student in students:
+    print(student["name"], student["house"], student["patronus"], sep=", ")
+
+#👇🏻
+
+#Hermione, Gryffindor, Otter
+#Harry, Gryffindor, Stag
+#Ron, Gryffindor, Jack Russell terrier
+#Draco, Slytherin, None
+
+#the for loop will iterate through each of the dicts inside the list called students.
+#this code creates a list of dicts. The list called students has four dicts within it: One for each student. Also, notice that Python has a special None designation where there is no value associated with a key.
+
+#-----Mario-----
+#emember that the classic game Mario has a hero jumping over bricks. Let’s create a textual representation of this game.
+
+#Notice how we are copying and pasting the same code over and over again.
+print("#")
+print("#")
+print("#")
+
+# or 👇🏻
+
+for _ in range(3):
+    print("#")
+
+# column can grow as much as we want without any hard coding.
+def main():
+    print_column(3)
+def print_column(height):
+    for _ in range(height):
+        print("#")
+main()
+
+#Now, let’s try to print a row horizontally. Modify your code as follows:
+def main():
+    print_row(4)
+def print_row(width):
+    print("?" * width)
+main()
+
 #
